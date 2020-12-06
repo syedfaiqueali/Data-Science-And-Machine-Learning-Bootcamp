@@ -1,0 +1,13 @@
+y = mx + c
+
+m(Slope) = how much the 'y' will change for a given change in 'x'. 
+           The larger the slope value the steeper the line becomes.
+           
+           The stronger the relationship the steeper the slope.
+           
+Fitted value = The difference b/w actual data points and the point on the line. 
+               The point on the line is the fitted value.
+               
+Residual =   Imaginary line of the fitted value. It helps us choose between how 
+             good the line we are drawing. Look at the size of the residual and choose 
+             the line with the smallest residuals.
