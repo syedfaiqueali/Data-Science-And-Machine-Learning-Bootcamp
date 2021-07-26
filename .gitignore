@@ -1,0 +1,10 @@
+
+5. Train a Naive Bayes Classifier to Create a Spam Filter (Part 2)/SpamData/03_Testing/test-features.txt
+5. Train a Naive Bayes Classifier to Create a Spam Filter (Part 2)/SpamData/03_Testing/test-target.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/03_Testing/prob-all-tokens.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/03_Testing/prob-nonspam.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/03_Testing/prob-spam.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/03_Testing/test-features.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/03_Testing/test-target.txt
+6. Test and Evaluate a Naive Bayes Classifier (Part 3)/SpamData/01_Processing/email-text-data.json
+*.txt
