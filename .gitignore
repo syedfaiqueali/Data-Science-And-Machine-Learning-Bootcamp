@@ -68,3 +68,9 @@
 8. Build an Artificial Neural Network to Recognize Images using Keras & Tensorflow/tensorboard_cifar_logs/Model 3 XL at 16 55/train/plugins/profile/2021_07_28_16_55_42/Faiqs-MBP.trace.json.gz
 8. Build an Artificial Neural Network to Recognize Images using Keras & Tensorflow/tensorboard_cifar_logs/Model 3 XL at 16 55/train/plugins/profile/2021_07_28_16_55_42/Faiqs-MBP.xplane.pb
 8. Build an Artificial Neural Network to Recognize Images using Keras & Tensorflow/tensorboard_cifar_logs/Model 3 XL at 16 55/validation/events.out.tfevents.1627473343.Faiqs-MBP.1038.91320.v2
+9. Use Tensorflow to Classify Handwritten Digits/MNIST/digit_xtest.csv
+9. Use Tensorflow to Classify Handwritten Digits/MNIST/digit_xtrain.csv
+9. Use Tensorflow to Classify Handwritten Digits/MNIST/digit_ytest.csv
+9. Use Tensorflow to Classify Handwritten Digits/MNIST/digit_ytrain.csv
+9. Use Tensorflow to Classify Handwritten Digits/MNIST/test_img.png
+*.Faiqs-MBP
