@@ -33,7 +33,7 @@ function prepareCanvas() {
 
   //click anywhere on screen will trigger this event
   document.addEventListener('mousedown', function(event){
-    console.log('Mouse Pressed');
+    //console.log('Mouse Pressed');
 
     //start painting when mouse is down
     isPainting = true;
@@ -64,7 +64,7 @@ function prepareCanvas() {
 
   //click anywhere on screen will trigger this event
   document.addEventListener('mouseup', function(event){
-    console.log('Mouse Released');
+    //console.log('Mouse Released');
 
     //finish painting when mouse is Released
     isPainting = false;
@@ -78,7 +78,7 @@ function prepareCanvas() {
 
   //Touch Events
   canvas.addEventListener('touchstart', function(event){
-    console.log('Touchdown!');
+    //console.log('Touchdown!');
 
     //start painting when mouse is down
     isPainting = true;

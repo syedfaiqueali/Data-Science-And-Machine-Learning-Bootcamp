@@ -91,6 +91,9 @@ function predictImage() {
   result.print();  //to show result in console
   //console.log(tf.memory());
 
+  // Getting predicted value out from tensor
+  const output = result.dataSync()[0];
+
   //For Testing
   //showCanvasImageToDocument(image);
 
@@ -103,6 +106,8 @@ function predictImage() {
   X.dispose();
   result.dispose();
 
+  //Return output
+  return output;
 }
 
 function showCanvasImageToDocument(image) {

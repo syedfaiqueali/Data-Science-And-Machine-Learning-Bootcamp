@@ -16,6 +16,7 @@
   <!-- TODO: Add Javascript files here -->
   <script src='JS/drawing.js'></script>
   <script src='JS/processing.js'></script>
+  <script src='JS/maths.js'></script>
 
 </head>
 
@@ -42,12 +43,16 @@
 
     loadModel();
     prepareCanvas();
+    nextQuestion();
 
     //adding lister for check ans button
     document.getElementById('checkAnswer').addEventListener('click', function(){
-      predictImage();
-      //clear the canvas
+      // Check Answer
+      checkAnswer();
+      // Clear the canvas
       clearCanvas();
+      // Show new ques
+      nextQuestion();
     });
 
   </script>
