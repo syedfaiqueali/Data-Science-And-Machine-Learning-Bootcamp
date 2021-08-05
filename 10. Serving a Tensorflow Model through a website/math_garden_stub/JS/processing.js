@@ -80,6 +80,15 @@ function predictImage() {
   const M = cv.matFromArray(2, 3, cv.CV_64FC1, [1, 0, X_SHIFT, 0, 1, Y_SHIFT]); //cv.matFromArray(row, col, cv.CV_64FC1, [1, 0, x_shift, 0, 1, y_shift])
   cv.warpAffine(image, image, M, newSize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, BLACK); //warpAffine(src, dst, M, dsize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, new cv.Scalar())
 
+  //10- Normalize the Pixel Values (0-255 => 0-1)
+  let pixelValues = image.data; //Every pixel value in array form
+  pixelValues = Float32Array.from(pixelValues); //from arr of int to arr of float
+  pixelValues = pixelValues.map(function(item){
+    return item / 255.0;
+  });
+  console.log('Scaled Array :'+ pixelValues);
+
+
 
   //Testing
   const outputCanvas = document.createElement('CANVAS');
