@@ -24,29 +24,51 @@ function prepareCanvas() {
   context.lineWidth = LINE_WIDTH;
   context.lineJoin = 'round'  //For Smoothness of line
 
+
+  var isPainting = false;
+
   //click anywhere on screen will trigger this event
   document.addEventListener('mousedown', function(event){
-    console.log('X:'+event.clientX);
-    console.log('Y:'+event.clientY);
+    console.log('Mouse Pressed');
+
+    //start painting when mouse is down
+    isPainting = true;
+
+    //It will set currentX and currentY where we clicked
+    currentX = event.clientX - canvas.offsetLeft;
+    currentY = event.clientY - canvas.offsetTop;
+
   });
+
 
   //for cursor movement
   document.addEventListener('mousemove', function(event){
-    //Setting last X value
-    previousX = currentX;
-    //Setting canvas start(Top-Left) to x=0
-    currentX = event.clientX - canvas.offsetLeft;  // where mouse's x is currently
+    if (isPainting) {
+      //Setting last X value
+      previousX = currentX;
+      //Setting canvas start(Top-Left) to x=0
+      currentX = event.clientX - canvas.offsetLeft;  // where mouse's x is currently
 
-    //Setting last y value
-    previousY = currentY;
-    //Setting canvas start(Top-Left) to y=0
-    currentY = event.clientY - canvas.offsetTop;  // where mouse's y is currently
+      //Setting last y value
+      previousY = currentY;
+      //Setting canvas start(Top-Left) to y=0
+      currentY = event.clientY - canvas.offsetTop;  // where mouse's y is currently
 
-    context.beginPath();  //Create list of coordinates
-    context.moveTo(previousX, previousY);     //Set starting point of the path
-    context.lineTo(currentX, currentY);    //Set ending points of the path to draw line
-    context.closePath();
-    context.stroke();
+      context.beginPath();  //Create list of coordinates
+      context.moveTo(previousX, previousY);     //Set starting point of the path
+      context.lineTo(currentX, currentY);    //Set ending points of the path to draw line
+      context.closePath();
+      context.stroke();
+    }
+  });
+
+  //click anywhere on screen will trigger this event
+  document.addEventListener('mouseup', function(event){
+    console.log('Mouse Released');
+
+    //finish painting when mouse is Released
+    isPainting = false;
+
   });
 
 }
