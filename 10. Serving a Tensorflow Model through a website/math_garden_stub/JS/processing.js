@@ -12,11 +12,9 @@ async function loadModel() {
 }
 
 function predictImage() {
-  console.log('processing..')
-
-  //1- Load the image
+  // 1- Load the image
   let image = cv.imread(canvas);
-  //2- Convert image from RGB to GRAYSCALE (src, dst, cv.COLOR_RGBA2GRAY, 0)
+  // 2- Convert image from RGB to GRAYSCALE (src, dst, cv.COLOR_RGBA2GRAY, 0)
   cv.cvtColor(image, image, cv.COLOR_RGBA2GRAY, 0);
   // convert image from GrayScale to Black & white ;175=gray to 255=white
   cv.threshold(image, image, 175, 255, cv.THRESH_BINARY);
@@ -58,25 +56,42 @@ function predictImage() {
   const RIGHT = Math.floor(4 + (20 - width) / 2);  //floor = rounding_down
   const TOP = Math.ceil(4 + (20 - height) / 2);
   const BOTTOM = Math.floor(4 + (20 - height) / 2);
-
   console.log(`Top: ${TOP}, Bottom: ${BOTTOM}, Left: ${LEFT}, Right: ${RIGHT}`);
 
   // 7- Add Padding to image 28x28px
   const BLACK = new cv.Scalar(0,0,0,0); //(r,g,b,alpha)
   cv.copyMakeBorder(image, image, TOP, BOTTOM, LEFT, RIGHT, cv.BORDER_CONSTANT, BLACK);
 
+  // 8- Finding Center of Mass of image
+  cv.findContours(image, contours, hierarchy, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE);
+  cnt = contours.get(0);
+  const Moments = cv.moments(cnt, false);  //binary_image = false
+
+  // Getting coordinates for img center
+  const cx = Moments.m10 / Moments.m00; //m10=mass_in_horizontal_dir, m00=mass_for_img_as_whole(area)
+  const cy = Moments.m01 / Moments.m00; //m01=mass_in_vertical_dir
+  console.log(`M00(Area): ${Moments.m00}, cx: ${cx}, cy: ${cy}`);
+
+  // 9- Shifting the image(center the image in horizontal)
+  const X_SHIFT = Math.round(image.cols/2.0 - cx); // (14.0 - cx)
+  const Y_SHIFT = Math.round(image.rows/2.0 - cy);
+
+  newSize = new cv.Size(image.cols, image.rows); //current size if img
+  const M = cv.matFromArray(2, 3, cv.CV_64FC1, [1, 0, X_SHIFT, 0, 1, Y_SHIFT]); //cv.matFromArray(row, col, cv.CV_64FC1, [1, 0, x_shift, 0, 1, y_shift])
+  cv.warpAffine(image, image, M, newSize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, BLACK); //warpAffine(src, dst, M, dsize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, new cv.Scalar())
+
 
   //Testing
   const outputCanvas = document.createElement('CANVAS');
-
-  cv.imshow(outputCanvas, image); //(where_to_display_img, img)
-  //append canvas output to the document
+  cv.imshow(outputCanvas, image);
   document.body.appendChild(outputCanvas);
+
 
   //OpenCV Cleanup
   image.delete();
   contours.delete();
   cnt.delete();
   hierarchy.delete();
+  M.delete();
 
 }
