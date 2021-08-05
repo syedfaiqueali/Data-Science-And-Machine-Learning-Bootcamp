@@ -15,9 +15,8 @@ var context;
 var isPainting = false;
 
 // FUNCTIONS
-
 function prepareCanvas() {
-  console.log('Preparing canvas');
+  //console.log('Preparing canvas');
   canvas = document.getElementById('my-canvas')
   context = canvas.getContext('2d') //2D canvas
 

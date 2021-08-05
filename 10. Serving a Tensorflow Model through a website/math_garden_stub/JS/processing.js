@@ -1,14 +1,10 @@
-async function loadModel() {
-  //data
-  const dataX0 = [[0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.33, 0.73, 0.62, 0.59, 0.24, 0.14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.87, 1.00, 1.00, 1.00, 1.00, 0.95, 0.78, 0.78, 0.78, 0.78, 0.78, 0.78, 0.78, 0.78, 0.67, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.26, 0.45, 0.28, 0.45, 0.64, 0.89, 1.00, 0.88, 1.00, 1.00, 1.00, 0.98, 0.90, 1.00, 1.00, 0.55, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.07, 0.26, 0.05, 0.26, 0.26, 0.26, 0.23, 0.08, 0.93, 1.00, 0.42, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.33, 0.99, 0.82, 0.07, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.09, 0.91, 1.00, 0.33, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.51, 1.00, 0.93, 0.17, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.23, 0.98, 1.00, 0.24, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.52, 1.00, 0.73, 0.02, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.04, 0.80, 0.97, 0.23, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.49, 1.00, 0.71, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.29, 0.98, 0.94, 0.22, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.07, 0.87, 1.00, 0.65, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.80, 1.00, 0.86, 0.14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.15, 1.00, 1.00, 0.30, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.12, 0.88, 1.00, 0.45, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.52, 1.00, 1.00, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.24, 0.95, 1.00, 1.00, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.47, 1.00, 1.00, 0.86, 0.16, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.47, 1.00, 0.81, 0.07, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]];
+// Variables
+var model;
 
-  //putting data into tensor
-  const myTensor = tf.tensor(dataX0);
+// Functions
+async function loadModel() {
   //loading model.json
-  const model = await tf.loadGraphModel('TFJS/model.json');
-  //prediction
-  const result = model.predict(myTensor);
-  result.print();
+  model = await tf.loadGraphModel('TFJS/model.json');
 }
 
 function predictImage() {
@@ -31,7 +27,7 @@ function predictImage() {
   // 5- Cropping the Image
   image = image.roi(rect);  //roi = region of interest
 
-  // getting canvas image height and width
+  // 6- Cal new size (getting canvas image height and width)
   var height = image.rows;
   var width = image.cols;
 
@@ -48,7 +44,7 @@ function predictImage() {
     height = Math.round(image.rows / scaleFactor); //rounding to nearest int
   }
 
-  // 6- Image resizing to 20px or 20px
+  // 7- Image resizing to 20px or 20px
   let newSize = new cv.Size(width, height);  //dsize
   cv.resize(image, image, newSize, 0, 0, cv.INTER_AREA); // (src, dest, dsize, 0, 0, cv.INTER_AREA)
 
@@ -56,13 +52,13 @@ function predictImage() {
   const RIGHT = Math.floor(4 + (20 - width) / 2);  //floor = rounding_down
   const TOP = Math.ceil(4 + (20 - height) / 2);
   const BOTTOM = Math.floor(4 + (20 - height) / 2);
-  console.log(`Top: ${TOP}, Bottom: ${BOTTOM}, Left: ${LEFT}, Right: ${RIGHT}`);
+  //console.log(`Top: ${TOP}, Bottom: ${BOTTOM}, Left: ${LEFT}, Right: ${RIGHT}`);
 
-  // 7- Add Padding to image 28x28px
+  // 8- Add Padding to image 28x28px
   const BLACK = new cv.Scalar(0,0,0,0); //(r,g,b,alpha)
   cv.copyMakeBorder(image, image, TOP, BOTTOM, LEFT, RIGHT, cv.BORDER_CONSTANT, BLACK);
 
-  // 8- Finding Center of Mass of image
+  // 9- Finding Center of Mass of image
   cv.findContours(image, contours, hierarchy, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE);
   cnt = contours.get(0);
   const Moments = cv.moments(cnt, false);  //binary_image = false
@@ -70,9 +66,9 @@ function predictImage() {
   // Getting coordinates for img center
   const cx = Moments.m10 / Moments.m00; //m10=mass_in_horizontal_dir, m00=mass_for_img_as_whole(area)
   const cy = Moments.m01 / Moments.m00; //m01=mass_in_vertical_dir
-  console.log(`M00(Area): ${Moments.m00}, cx: ${cx}, cy: ${cy}`);
+  //console.log(`M00(Area): ${Moments.m00}, cx: ${cx}, cy: ${cy}`);
 
-  // 9- Shifting the image(center the image in horizontal)
+  // 10- Shifting the image(center the image in horizontal)
   const X_SHIFT = Math.round(image.cols/2.0 - cx); // (14.0 - cx)
   const Y_SHIFT = Math.round(image.rows/2.0 - cy);
 
@@ -80,21 +76,23 @@ function predictImage() {
   const M = cv.matFromArray(2, 3, cv.CV_64FC1, [1, 0, X_SHIFT, 0, 1, Y_SHIFT]); //cv.matFromArray(row, col, cv.CV_64FC1, [1, 0, x_shift, 0, 1, y_shift])
   cv.warpAffine(image, image, M, newSize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, BLACK); //warpAffine(src, dst, M, dsize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, new cv.Scalar())
 
-  //10- Normalize the Pixel Values (0-255 => 0-1)
+  //11- Normalize the Pixel Values (0-255 => 0-1)
   let pixelValues = image.data; //Every pixel value in array form
   pixelValues = Float32Array.from(pixelValues); //from arr of int to arr of float
   pixelValues = pixelValues.map(function(item){
     return item / 255.0;
   });
-  console.log('Scaled Array :'+ pixelValues);
+  //console.log('Scaled Array :'+ pixelValues);
 
+  //12- Create a tensor and making predictions
+  const X = tf.tensor([pixelValues]);
+  //console.log(`Shape of Tensor: ${X.shape} || dtype of Tensor: ${X.dtype}`);
+  const result = model.predict(X);
+  result.print();  //to show result in console
+  //console.log(tf.memory());
 
-
-  //Testing
-  const outputCanvas = document.createElement('CANVAS');
-  cv.imshow(outputCanvas, image);
-  document.body.appendChild(outputCanvas);
-
+  //For Testing
+  //showCanvasImageToDocument(image);
 
   //OpenCV Cleanup
   image.delete();
@@ -102,5 +100,13 @@ function predictImage() {
   cnt.delete();
   hierarchy.delete();
   M.delete();
+  X.dispose();
+  result.dispose();
 
+}
+
+function showCanvasImageToDocument(image) {
+  const outputCanvas = document.createElement('CANVAS');
+  cv.imshow(outputCanvas, image);
+  document.body.appendChild(outputCanvas);
 }
