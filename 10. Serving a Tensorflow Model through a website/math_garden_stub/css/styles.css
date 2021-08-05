@@ -28,12 +28,14 @@ h1, h2 {
 #my-canvas {
   vertical-align: top;
   display: inline;
-  border: 5px solid #FFFFFF
+  border: 5px solid #FFFFFF;
+  border-radius: 15px;
 }
 
 .container {
   text-align: center;
   margin: 130px auto; /*50px*/
+  border-radius: 15px;
 }
 
 .btn {

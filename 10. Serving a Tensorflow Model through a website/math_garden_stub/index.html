@@ -6,10 +6,35 @@
   <link rel='stylesheet' href='css/styles.css'>
   <!-- Custom font -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap'>
+  <!--Favicon-->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <!--Tensorflow.js browser setup code -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 
   <!-- TODO: Add Javascript files here -->
+  <script src='drawing.js'></script>
+
+</head>
+
+<body>
+
+  <div class='container'>
+
+    <!-- TODO: Add title here -->
+    <h1 id='title'>Math Garden</h1>
+
+    <h2 id='question'><span id='n1'>3</span> + <span id='n2'>2</span> = </h2>
+
+    <!-- TODO: Add a drawing canvas here -->
+    <canvas id="my-canvas" width="150" height="150"></canvas>
+
+  </div>
+
+  <div class='container'>
+    <button id='checkAnswer' class='btn' value='Check'>Check Answer</button>
+  </div>
+
+  <!-- TODO: Set up TF model and drawing logic-->
   <script>
     async function loadModel() {
       //data
@@ -24,32 +49,10 @@
       result.print();
     }
 
-    // loading Model
     loadModel();
+    prepareCanvas();
 
   </script>
-
-</head>
-
-<body>
-
-  <div class='container'>
-
-    <!-- TODO: Add title here -->
-    <h1 id='title'>Math Garden</h1>
-
-    <h2 id='question'><span id='n1'>3</span> + <span id='n2'>2</span> = </h2>
-
-    <!-- TODO: Add a drawing canvas here -->
-    <canvas id='my-canvas' width="150" height="150"></canvas>
-
-  </div>
-
-  <div class='container'>
-    <button id='checkAnswer' class='btn' value='Check'>Check Answer</button>
-  </div>
-
-  <!-- TODO: Set up TF model and drawing logic-->
 
 </body>
 
