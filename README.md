@@ -146,8 +146,9 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- CONTACT -->
 ## Contact
-Syed Faique Ali - [@faiqueali017](https://github.com/faiqueali017) - faiqueali017@gmail.com
-LinkedIn Profile: [https://www.linkedin.com/in/faique-ali/](https://www.linkedin.com/in/faique-ali/)
+* Syed Faique Ali - [@faiqueali017](https://github.com/faiqueali017) - faiqueali017@gmail.com
+
+* LinkedIn Profile: [https://www.linkedin.com/in/faique-ali/](https://www.linkedin.com/in/faique-ali/)
 
 
 
