@@ -74,3 +74,11 @@
 9. Use Tensorflow to Classify Handwritten Digits/MNIST/digit_ytrain.csv
 9. Use Tensorflow to Classify Handwritten Digits/MNIST/test_img.png
 *.Faiqs-MBP
+10. Serving a Tensorflow Model through a website/MNIST/digit_xtest.csv
+10. Serving a Tensorflow Model through a website/MNIST/digit_xtrain.csv
+10. Serving a Tensorflow Model through a website/MNIST/digit_ytest.csv
+10. Serving a Tensorflow Model through a website/MNIST/digit_ytrain.csv
+10. Serving a Tensorflow Model through a website/MNIST/test_img.png
+10. Serving a Tensorflow Model through a website/.ipynb_checkpoints/01 TF Saved Model Export-checkpoint.ipynb
+10. Serving a Tensorflow Model through a website/MNIST/load_xtest.csv
+10. Serving a Tensorflow Model through a website/MNIST/load_ytest.csv
