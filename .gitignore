@@ -83,3 +83,5 @@
 10. Serving a Tensorflow Model through a website/MNIST/load_xtest.csv
 10. Serving a Tensorflow Model through a website/MNIST/load_ytest.csv
 11. Use Tensorflow to Classify Handwritten Alphabets/A_Z_Handwritten_Data.csv
+11. Use Tensorflow to Classify Handwritten Alphabets/NIST/alphabets_xtest.csv
+*.csv
