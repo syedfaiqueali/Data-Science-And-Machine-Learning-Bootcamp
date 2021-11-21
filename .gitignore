@@ -97,3 +97,6 @@
 11. Use Tensorflow to Classify Handwritten Alphabets/NIST/test_image9.png
 13. Using OpenCV to extract details from cheque and recognize it/Image_Samples/Sample1.png
 13. Using OpenCV to extract details from cheque and recognize it/Image_Samples/Sample2.jpeg
+12. Using OpenCV to extract alphabets/SavedModel/saved_model.pb
+12. Using OpenCV to extract alphabets/SavedModel/variables/variables.data-00000-of-00001
+12. Using OpenCV to extract alphabets/SavedModel/variables/variables.index
