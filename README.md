@@ -76,6 +76,7 @@
 * Neural Networks and Deep Learning
 * Model Evaluation and Analysis
 * Serving a Tensorflow Model
+* Image Processing using open-cv
 
 ### Language and Libraries used
 * Python
